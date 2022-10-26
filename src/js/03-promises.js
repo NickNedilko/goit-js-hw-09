@@ -13,7 +13,7 @@ function onFormSubmit(e) {
   const amount = e.currentTarget.amount.value;
   console.log(amount);
 
-  for (i = 1; i <= amount; i += 1) {
+  for (let i = 1; i <= amount; i += 1) {
     let position = i;
 
     createPromise(position, delay)
