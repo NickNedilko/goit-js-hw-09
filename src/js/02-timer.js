@@ -12,6 +12,7 @@ const refs = {
 
 refs.startBtn.setAttribute('disabled', 'disabled');
 let userDate = null;
+let timerId = null;
 const currentDate = Date.now();
 
 const options = {
@@ -36,7 +37,7 @@ refs.startBtn.addEventListener('click', startTimer);
 
 function startTimer() {
   refs.startBtn.setAttribute('disabled', 'disabled');
-  let timerId = setInterval(() => {
+  timerId = setInterval(() => {
     const currentTime = Date.now();
     let deltaTime = userDate - currentTime;
     let { seconds, minutes, hours, days } = convertMs(deltaTime);
