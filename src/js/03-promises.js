@@ -3,12 +3,12 @@ import Notiflix, { Notify } from 'notiflix';
 const refs = {
   formEl: document.querySelector('.form'),
 };
-let delay = null;
+// let delay = null;
 refs.formEl.addEventListener('submit', onFormSubmit);
 
 function onFormSubmit(e) {
   e.preventDefault();
-  delay = +e.currentTarget.delay.value;
+  let delay = +e.currentTarget.delay.value;
   const step = +e.currentTarget.step.value;
   const amount = e.currentTarget.amount.value;
   console.log(amount);
