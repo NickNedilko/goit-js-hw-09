@@ -23,7 +23,6 @@ function onBtnStopClick() {
   clearInterval(timerId);
   refs.btnStart.removeAttribute('disabled', 'disabled');
   refs.btnStop.setAttribute('disabled', 'disabled');
-
   console.log(timerId);
 }
 
